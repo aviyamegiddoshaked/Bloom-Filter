@@ -1,8 +1,7 @@
-## Please note - a wiki folder that explains the final project, i.e. step 4 and last, appears in the EX1 repository under the branch EX4-BloomFilterServer
+**BloomFilter Server**
 
-# EX1 - ASP
-# Assignment 1 - Advanced systems Programing Course, BIU.
-## Made by Tali Zikel and Aviya Megiddo Shaked
+# first step  Advanced systems Programing Course, BIU, 2024.
+
 ### In this assignment we implemented a Bloom filter algorithm.
 We implemented a Bloom filter for rapid URL blacklisting checks, but acknowledged its susceptibility to false positives. To address this, we incorporated a secondary validation step for positive results, utilizing a conventional check to scrutinize whether the flagged URL is genuinely blacklisted or if it's a false positive. This approach allows us to capitalize on the efficiency of the Bloom filter for quick assessments while maintaining accuracy through a subsequent, more meticulous verification process.
 
@@ -57,20 +56,21 @@ cmake --build build
 ./build/CalcTests
 
 
-## Jira
-We used Jira as a tool for tracking and documenting the progress of each step of our work. To begin with, we created a sprint that includes all the tasks we need to do. Every task that was in the process of being executed we placed under the "In Progress" column and every task that we completed was under the "Done" column.
+## Test-Driven Development (TDD)
+In developing our project, we adhered to a structured Test-Driven Development (TDD) approach, working iteratively and methodically.
 
-## Github
-The GitHub repository contains both the source code for the Docker container and the automated tests. The codebase includes instructions for building the Docker image, enclosing our program and its dependencies. Automated tests in the GitHub repository make sure the app is reliable and works properly.
+We began by drafting a general test and setting up a basic main function without any implemented classes or logic. Predictably, this initial test failed, as no functionality was yet in place. From there, we incrementally enhanced our program, writing more specific tests alongside the implementation of classes and functions.
 
-## TDD
-In the TDD process we worked gradually.
-First, we created a general test, and a main function without content, and without any classes. Of course, the test failed as we expected.
-after that, we created more specific test for the program, while writing the program itself. We added functions, classes, and wanted the program to pass the test for one specific hash function. But our test failed, and the output was also incorrect.
-That's why we worked overtime to fix the code, to change the classes and functions, and also the test.
-Next, the test for one hash function passed successfully.
-In the last step, we updated the program so that it fits different hash functions.
-The test passed as we expected.
+Our initial focus was on making the program pass tests for a single hash function. Despite our efforts, the test initially failed, producing incorrect outputs. This setback prompted us to revisit and refine our code, modifying the structure of both the classes and the tests themselves. After considerable effort, we succeeded in making the test for one hash function pass.
+
+In the final phase, we extended the program's functionality to accommodate multiple hash functions, ensuring the updated tests passed seamlessly.
+
+
 
 ## Docker Hub
-We established a streamlined CI/CD process for our Bloom filter-based URL filtering program using GitHub Workflows. Following each pull request into the main branch, the CI pipeline automatically executed all tests, making sure the code is trustworthy. Additionally, for each release version, the workflow generates the creation and pushing of a Dockerized version of our program to a  private repository on DockerHub. The Docker image is like a packed box that holds our program and all things it needs in order to run. By using DockerHub, we make it easy to set up and share our program. This helps deliver it smoothly and efficiently on various computer systems.
+Docker Hub and CI/CD Pipeline
+To optimize deployment for our project, we integrated a robust CI/CD pipeline using GitHub Workflows and Docker. Every pull request to the main branch triggered an automated CI pipeline to execute all tests, verifying the reliability of the codebase.
+
+For each release version, our workflow generated a Dockerized version of the program, which was then pushed to a private repository on DockerHub. The Docker image encapsulated the program along with all its dependencies, ensuring easy setup and portability.
+
+This streamlined process facilitated efficient distribution of the program, enabling consistent performance across various systems and simplifying deployment for diverse environments.
