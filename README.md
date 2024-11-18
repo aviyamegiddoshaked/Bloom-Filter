@@ -1,8 +1,8 @@
-**BloomFilter Server**
+# BloomFilter Server
 
-# first step  Advanced systems Programing Course, BIU, 2024.
+## first step  Advanced systems Programing Course, BIU, 2024.
 
-### Implementation of a Bloom Filter Algorithm
+## Implementation of a Bloom Filter Algorithm
 
 This project implements a Bloom Filter, a space-efficient probabilistic data structure used for rapid URL blacklisting checks. Written in C++, it includes functionalities such as adding URLs to the filter, checking whether a URL is present, and managing false positives.
 
