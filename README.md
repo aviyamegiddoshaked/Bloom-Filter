@@ -2,8 +2,14 @@
 
 # first step  Advanced systems Programing Course, BIU, 2024.
 
-### In this assignment we implemented a Bloom filter algorithm.
-We implemented a Bloom filter for rapid URL blacklisting checks, but acknowledged its susceptibility to false positives. To address this, we incorporated a secondary validation step for positive results, utilizing a conventional check to scrutinize whether the flagged URL is genuinely blacklisted or if it's a false positive. This approach allows us to capitalize on the efficiency of the Bloom filter for quick assessments while maintaining accuracy through a subsequent, more meticulous verification process.
+### Implementation of a Bloom Filter Algorithm
+
+This project implements a Bloom Filter, a space-efficient probabilistic data structure used for rapid URL blacklisting checks. Written in C++, it includes functionalities such as adding URLs to the filter, checking whether a URL is present, and managing false positives.
+
+To address the Bloom Filter's susceptibility to false positives, we incorporated a secondary validation step. This step involves a conventional lookup for flagged URLs to verify whether they are genuinely blacklisted. This combination allows the system to leverage the Bloom Filter’s efficiency for quick assessments while ensuring accuracy through meticulous follow-up checks.
+
+In this assignment, the Bloom Filter was specifically utilized in the **Facebook Clone project** to enhance content moderation. It was employed to prevent users from posting with forbidden URLs, thereby improving platform security and ensuring harmful or restricted content was effectively blocked. By integrating this Bloom Filter into the Facebook Clone, we demonstrated its real-world application in safeguarding user interactions and maintaining a secure environment.
+
 
 ## src folder
 
